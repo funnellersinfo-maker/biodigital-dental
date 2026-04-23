@@ -6,9 +6,14 @@
     "dev": "next dev -p 3000 2>&1 | tee dev.log",
     "build": "next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/",
     "start": "NODE_ENV=production bun .next/standalone/server.js 2>&1 | tee server.log",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "db:push": "echo 'DB skipped - static site'",
+    "db:generate": "echo 'DB skipped - static site'",
+    "db:migrate": "echo 'DB skipped - static site'",
+    "db:reset": "echo 'DB skipped - static site'"
   },
   "dependencies": {
+    "@prisma/client": "^6.11.1",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-alert-dialog": "^1.1.14",
     "@radix-ui/react-aspect-ratio": "^1.1.7",
@@ -55,6 +60,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "^16.1.1",
+    "prisma": "^6.11.1",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.3.5",
     "typescript": "^5"
